@@ -1,7 +1,7 @@
 import java.util.HashMap;
 
 
-public class AddressBook extends BuddyInfo
+public class AddressBook 
 {
 
 	private HashMap<String, BuddyInfo> book; 
@@ -41,6 +41,10 @@ public class AddressBook extends BuddyInfo
 	}
 	public static void main(String[] args)
 	{
-		System.out.println("Address Book");
+		BuddyInfo buddy = new BuddyInfo("Justin","613-906-1234","666 Devil St,Hell");
+		AddressBook book = new AddressBook(); 
+		if(!book.addBuddy(buddy.getName(), buddy))System.out.println("Add error"); 
+		if(!book.removeBuddy(buddy.getName()))System.out.println("remove error"); 
+		
 	}
 }
