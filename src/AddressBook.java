@@ -1,20 +1,20 @@
-import java.util.HashMap;
+import java.util.ArrayList;
 
 
 public class AddressBook 
 {
 
-	private HashMap<String, BuddyInfo> book; 
+	private ArrayList<BuddyInfo> book; 
 	
 	
 	
-	public boolean addBuddy(String name, BuddyInfo budInfo)
+	public boolean addBuddy( BuddyInfo budInfo)
 	{
 		boolean doesWork = true; 
 		
 		try
 		{
-			book.put(name,budInfo); 
+			book.add(budInfo); 
 		}
 		catch(Exception e )
 		{
@@ -23,13 +23,13 @@ public class AddressBook
 		
 		return doesWork;
 	}
-	public boolean removeBuddy(String name)
+	public boolean removeBuddy(BuddyInfo budInfo)
 	{
 		boolean doesWork = true; 
 	
 		try 
 		{
-			book.remove(name);
+			book.remove(budInfo);
 		}
 		catch(Exception e)
 		{
@@ -43,8 +43,12 @@ public class AddressBook
 	{
 		BuddyInfo buddy = new BuddyInfo("Justin","613-906-1234","666 Devil St,Hell");
 		AddressBook book = new AddressBook(); 
-		if(!book.addBuddy(buddy.getName(), buddy))System.out.println("Add error"); 
-		if(!book.removeBuddy(buddy.getName()))System.out.println("remove error"); 
+		if(!book.addBuddy(buddy)){
+			System.out.println("Add error"); 
+		}
+		if(!book.removeBuddy(buddy)){
+			System.out.println("remove error"); 
+		}
 		
 	}
 }

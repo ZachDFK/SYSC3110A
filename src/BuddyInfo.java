@@ -46,14 +46,14 @@ public class BuddyInfo {
 		this.phoneNumber = phoneNumber;
 	}
 
-	public static void main(String[] args) {
-	
-		// TODO Auto-generated method stub
-		BuddyInfo buddy = new BuddyInfo();
-		buddy.setName("Justin");
+	public BuddyInfo(String name, String phoneNumber, String address)
+	{
 		
-		System.out.println("Hello"+ buddy.getName());
+		this.setName(name);
+		this.setPhoneNumber(phoneNumber);
+		this.setAddress(address);
 		
 	}
+
 
 }
