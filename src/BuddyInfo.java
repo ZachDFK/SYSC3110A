@@ -38,6 +38,10 @@ public class BuddyInfo {
 	public String getPhoneNumber() {
 		return phoneNumber;
 	}
+	public String getFullInfo()
+	{
+		return "Name: " + this.name + " Address: " + this.address + " Number: " + this.number;
+	}
 
 	/**
 	 * @param phoneNumber the phoneNumber to set
