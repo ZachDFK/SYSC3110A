@@ -40,7 +40,7 @@ public class BuddyInfo {
 	}
 	public String getFullInfo()
 	{
-		return "Name: " + this.name + " Address: " + this.address + " Number: " + this.number;
+		return "Name: " + this.name + " Address: " + this.address + " Number: " + this.phoneNumber;
 	}
 
 	/**
